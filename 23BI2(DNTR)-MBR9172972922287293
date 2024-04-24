@@ -17,7 +17,7 @@ local data = {
     ["embeds"] = {
         {
             ["title"] = "Script Executed !",
-            ["description"] = "`📂 | Harlen Hub \n🟢 | Script Game: Break In 2 (Story) ( " .. gamename .. " ) \n⏰ | Script Execution Time : " .. formatted_time .. "`",
+            ["description"] = "`📂 | Harlen Hub \n🟢 | Script Game : Break In 2 (Story) ( " .. gamename .. " ) \n⏰ | Script Execution Time : " .. formatted_time .. "`",
             ["type"] = "rich",
             ["color"] = tonumber(0xa305ff),
             ["fields"] = {
