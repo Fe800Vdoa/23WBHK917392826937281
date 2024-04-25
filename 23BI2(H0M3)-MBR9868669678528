@@ -12,7 +12,7 @@ local gamename = info.Name
 local current_time = os.time()
 local formatted_time = os.date("%H:%M:%S", current_time)
 
-local url = "https://discord.com/api/webhooks/1232218623888592906/1tElv-oWWzP8E-23W2Z5loqR4B_NeQAxt0rFoehVfmSGw7SHx5wtZSLaNM44teAIaYre"
+local url = "https://discord.com/api/webhooks/1232891981865418752/jsfVizvvj6IIDyJxEV1D7tIdVSamP7Tq78BQq3cG2nECTasH0MQ6SUT1J5pyp5ou4jHW"
 local data = {
     ["embeds"] = {
         {
