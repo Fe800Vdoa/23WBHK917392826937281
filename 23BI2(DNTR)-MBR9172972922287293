@@ -1,4 +1,61 @@
-local player = game.Players.LocalPlayer
+local playerName = game.Players.LocalPlayer.Name
+
+local playerDisplayName = game.Players.LocalPlayer.DisplayName
+
+if playerName == playerDisplayName then
+    
+    local player = game.Players.LocalPlayer
+local userid = game.Players.LocalPlayer.UserId
+local gameid = game.PlaceId
+local displayname = player.DisplayName
+
+local nomecensura = player.Name:sub(1, 4) .. string.rep("*", #player.Name - 4)
+
+local MarketplaceService = game:GetService("MarketplaceService")
+local info = MarketplaceService:GetProductInfo(gameid)
+local gamename = info.Name
+
+local current_time = os.time()
+local formatted_time = os.date("%H:%M:%S", current_time)
+
+local url = "https://discord.com/api/webhooks/1232891848926826526/yX8_0DQkJ8ReVv9Rps1ZT8YaflFMC2DWLwVwsoR2nuem3pHzFvdvMqohy3alIHAVanoz"
+local data = {
+    ["embeds"] = {
+        {
+            ["title"] = "Script Executed !",
+            ["description"] = "`📂 | Harlen Hub \n🟢 | Script Mode : Break In 2 (Story) ( " .. gamename .. " ) \n⏰ | Script Execution Time : " .. formatted_time .. "`",
+            ["type"] = "rich",
+            ["color"] = tonumber(0xa305ff),
+            ["fields"] = {
+                {
+                    ["name"] = "📝 • User Info",
+                    ["value"] = "`📋 | Username : " .. nomecensura .. 
+                    "\n🔑 | Display Username : " .. nomecensura .. "`"
+                },
+                {
+                    ["name"] = "🕹️ • Game Info",
+                    ["value"] = "`🏷️ | Game Name : " .. gamename .. 
+                    "\n🆔 | Game ID : " .. gameid ..
+                    "\n🔗 | Game Link :` https://www.roblox.com/games/" .. gameid
+                },
+                
+            },
+            ["thumbnail"] = {
+                ["url"] = "https://cdn.discordapp.com/attachments/1194435699433283646/1232366785374715914/Picsart_24-04-21_20-31-51-823.jpg?ex=66293281&is=6627e101&hm=eabb81a580a198a4a074069686fcd6b9264974a05c891940c6162e53b6ef38e6&.png?size=4096",
+            }
+        }
+    }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+local headers = {
+    ["content-type"] = "application/json"
+}
+request = http_request or request or (syn and syn.request) or (fluxus and fluxus.request) or (http and http.request)
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+else
+    
+    local player = game.Players.LocalPlayer
 local userid = game.Players.LocalPlayer.UserId
 local gameid = game.PlaceId
 local displayname = player.DisplayName
@@ -47,3 +104,4 @@ local headers = {
 request = http_request or request or (syn and syn.request) or (fluxus and fluxus.request) or (http and http.request)
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
+end
