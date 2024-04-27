@@ -31,9 +31,7 @@ local data = {
                 {
                     ["name"] = "📝 • User Info",
                     ["value"] = "`📋 | Username : " .. nomecensura .. 
-                    "\n🔑 | Display Username : " .. nomecensura .. 
-                    "\n🔧 | Executor : " .. executor .. 
-                    "\n❓ | Platform : " .. deviceType .. "`"
+                    "\n🔑 | Display Username : " .. nomecensura .. "\n🔧 | Executor : " .. executor .. "\n❓ | Platform : " .. deviceType .. "`"
                 },
                 {
                     ["name"] = "🕹️ • Game Info",
