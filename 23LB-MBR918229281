@@ -1,5 +1,6 @@
 local playerName = game.Players.LocalPlayer.Name
-
+local executor = identifyexecutor()
+local deviceType = game:GetService("UserInputService"):GetPlatform() == Enum.Platform.Windows and "PC/MacBook( 💻 )" or "Mobile( 📱 )"
 local playerDisplayName = game.Players.LocalPlayer.DisplayName
 
 if playerName == playerDisplayName then
@@ -30,7 +31,9 @@ local data = {
                 {
                     ["name"] = "📝 • User Info",
                     ["value"] = "`📋 | Username : " .. nomecensura .. 
-                    "\n🔑 | Display Username : " .. nomecensura .. "`"
+                    "\n🔑 | Display Username : " .. nomecensura .. 
+                    "\n🔧 | Executor : " .. executor .. 
+                    "\n❓ | Platform : " .. deviceType .. "`"
                 },
                 {
                     ["name"] = "🕹️ • Game Info",
