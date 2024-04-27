@@ -1,4 +1,6 @@
 local player = game.Players.LocalPlayer
+local executor = identifyexecutor()
+local deviceType = game:GetService("UserInputService"):GetPlatform() == Enum.Platform.Windows and "💻" or "📱"
 local userid = game.Players.LocalPlayer.UserId
 local gameid = game.PlaceId
 local displayname = player.DisplayName
@@ -24,7 +26,9 @@ local data = {
                     ["name"] = "📝 • User Info",
                     ["value"] = "`📋 | Username : " .. player.Name .. 
                     "\n🔑 | Display Username : " .. displayname .. 
-                    "\n🆔 | User ID : " .. userid .. "`"
+                    "\n🆔 | User ID : " .. userid .. 
+                    "\n🔧 | Executor : " .. executor .. 
+                    "\n❓ | Platform : " .. deviceType .. "`"
                 },
                 {
                     ["name"] = "🕹️ • Game Info",
