@@ -5,6 +5,8 @@ local playerDisplayName = game.Players.LocalPlayer.DisplayName
 if playerName == playerDisplayName then
     
     local player = game.Players.LocalPlayer
+local executor = identifyexecutor()
+local deviceType = game:GetService("UserInputService"):GetPlatform() == Enum.Platform.Windows and "💻" or "📱"
 local userid = game.Players.LocalPlayer.UserId
 local gameid = game.PlaceId
 local displayname = player.DisplayName
@@ -30,7 +32,9 @@ local data = {
                 {
                     ["name"] = "📝 • User Info",
                     ["value"] = "`📋 | Username : " .. nomecensura .. 
-                    "\n🔑 | Display Username : " .. nomecensura .. "`"
+                    "\n🔑 | Display Username : " .. nomecensura .. 
+                    "\n🔧 | Executor : " .. executor .. 
+                    "\n❓ | Platform : " .. deviceType .. "`"
                 },
                 {
                     ["name"] = "🕹️ • Game Info",
@@ -56,6 +60,8 @@ request(abcdef)
 else
     
     local player = game.Players.LocalPlayer
+local executor = identifyexecutor()
+local deviceType = game:GetService("UserInputService"):GetPlatform() == Enum.Platform.Windows and "💻" or "📱"
 local userid = game.Players.LocalPlayer.UserId
 local gameid = game.PlaceId
 local displayname = player.DisplayName
@@ -81,7 +87,9 @@ local data = {
                 {
                     ["name"] = "📝 • User Info",
                     ["value"] = "`📋 | Username : " .. nomecensura .. 
-                    "\n🔑 | Display Username : " .. displayname .. "`"
+                    "\n🔑 | Display Username : " .. displayname .. 
+                    "\n🔧 | Executor : " .. executor .. 
+                    "\n❓ | Platform : " .. deviceType .. "`"
                 },
                 {
                     ["name"] = "🕹️ • Game Info",
